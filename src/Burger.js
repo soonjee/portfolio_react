@@ -5,17 +5,17 @@ const StyledBurger = styled.button`
     /* position: absolute;
     top: 50px;
     right: 50px; */
+    position: fixed;
     top: 50px;
     right: 50px;
-    position: fixed;
-    flex-direction: column;
-    justify-content: space-around;
+    /* flex-direction: column;
+    justify-content: space-around; */
     width: 2rem;
     height: 2rem;
+    padding: 0;
     background: transparent;
     border: none;
-    cursor: pointer; 
-    padding: 0;
+    cursor: pointer;
     z-index: 10;
 
     &:focus {
@@ -23,17 +23,17 @@ const StyledBurger = styled.button`
     }
 
     div {
-        width: 35px;
-        height: 4px;
+        width: 30px;
+        height: 3.2px;
         margin-bottom: 5px;
-        background: ${({ open }) => (open ? "#0D0C1D" : "#333")};
+        background: ${({ open }) => (open ? "#F2F2F2" : "#333")};
         /* border-radius: 5px; */
         transition: all 0.3s linear;
         position: relative;
         transform-origin: 1px;
 
     :first-child {
-        transform: ${({ open }) => (open ? "rotate(35deg)" : "rotate(0)")};
+        transform: ${({ open }) => (open ? "rotate(38deg)" : "rotate(0)")};
     }
 
     :nth-child(2) {
@@ -42,7 +42,7 @@ const StyledBurger = styled.button`
     }
 
     :nth-child(3) {
-        transform: ${({ open }) => (open ? "rotate(-35deg)" : "rotate(0)")};
+        transform: ${({ open }) => (open ? "rotate(-38deg)" : "rotate(0)")};
         }
     }
 `;

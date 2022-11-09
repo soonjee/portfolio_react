@@ -2,18 +2,23 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledMenu = styled.nav`
+    position: fixed;
+    top: 0;
+    right: 0;
+
     display: flex;
+    width: 500px;
+    height: 100vh;
+    padding: 50px 50px 50px 70px;
+
     flex-direction: column;
     justify-content: center;
-    background: #a6a7ab;
-    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
-    height: 100vh;
+    
+    background: #0A0A0A;
     text-align: left;
-    padding: 2rem;
-    position: absolute;
-    top: 0;
-    left: 0;
     transition: transform 0.3s ease-in-out;
+    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+    z-index: 9;
 
     @media (max-width: 576px) {
         width: 100%;
@@ -21,11 +26,11 @@ const StyledMenu = styled.nav`
 
     a {
         font-size: 2rem;
-        text-transform: uppercase;
-        padding: 2rem 0;
-        font-weight: bold;
-        letter-spacing: 0.5rem;
-        color: #0d0c1d;
+        font-weight: 500;
+        /* text-transform: uppercase; 대문자 */
+        padding: 60px 0;
+        letter-spacing: -2%;
+        color: #F2F2F2;
         text-decoration: none;
         transition: color 0.3s linear;
 
@@ -34,9 +39,9 @@ const StyledMenu = styled.nav`
         text-align: center;
         }
 
-        &:hover {
-        color: #343078;
-        }
+        /* &:hover {
+        color: #F2F2F2;
+        } */
     }
 `;
 
@@ -45,15 +50,15 @@ const Menu = ({ open }) => {
         <StyledMenu open={open}>
         <a href="/">
             <span role="img" aria-label="about us" />
-            About us
+            Home
         </a>
         <a href="/">
             <span role="img" aria-label="price" />
-            Pricing
+            Project
         </a>
         <a href="/">
             <span role="img" aria-label="contact" />
-            Contact
+            About
         </a>
         </StyledMenu>
     );

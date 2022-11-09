@@ -1,4 +1,12 @@
+/* Font */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+
+/* 
+
+*/
 body {
+    font-family: "Pretendard Variable";
     margin: 0; 
     -ms-overflow-style: none /* IE and Edge 스크롤바 없애는 css*/;
      scrollbar-width: none; /* Firefox 스크롤바 없애는 css */
@@ -6,6 +14,9 @@ body {
 body::-webkit-scrollbar  {
     display: none; /* Chrome , Safari , Opera 스크롤바 없애는 css*/
 }
+/* 
+
+*/
 .navbar { 
     position: fixed;
     display: inline-block;
